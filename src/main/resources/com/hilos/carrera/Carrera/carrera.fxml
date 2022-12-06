@@ -22,7 +22,7 @@
                <font>
                   <Font size="32.0" />
                </font></Button>
-            <Button fx:id="pause" mnemonicParsing="false" prefHeight="99.0" prefWidth="200.0" text="Pause">
+            <Button fx:id="pause" mnemonicParsing="false" onAction="#pauseButton" prefHeight="99.0" prefWidth="200.0" text="Pause">
                <font>
                   <Font size="32.0" />
                </font></Button>

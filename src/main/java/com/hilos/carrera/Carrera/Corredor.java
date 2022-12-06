@@ -9,8 +9,6 @@ public class Corredor extends Thread {
 	private ImageView posicion;
 	private CarreraController corredor;
 	
-	private boolean confirm = true;
-	
 	public Corredor(ImageView posicion, CarreraController corredor) {
 		this.posicion = posicion;
 		this.corredor = corredor;
@@ -22,7 +20,7 @@ public class Corredor extends Thread {
 		int c3 = 0;
 		int c4 = 0;
 		
-		while(confirm) {
+		while(true) {
 			try {
 				Thread.sleep((int)(Math.random() * 1000));
 				c1 = (int) corredor.getC1().getLayoutX();

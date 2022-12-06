@@ -56,31 +56,37 @@ public class CarreraController  {
 		return barrera;
 	}
 	
-	
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		pause.setDisable(true);
 		playagain.setDisable(true);
 	}
 	
+	Corredor corredor1;
+	Corredor corredor2;
+	Corredor corredor3;
+	Corredor corredor4;
+	
 	@FXML
 	public void startButton() {
-		
-		Corredor corredor1 = new Corredor(c1, this);
-		Corredor corredor2 = new Corredor(c2, this);
-		Corredor corredor3 = new Corredor(c3, this);
-		Corredor corredor4 = new Corredor(c4, this);
+		corredor1 = new Corredor(c1, this);
+		corredor2 = new Corredor(c2, this);
+		corredor3 = new Corredor(c3, this);
+		corredor4 = new Corredor(c4, this);
 		
 		corredor1.start();
 		corredor2.start();
 		corredor3.start();
 		corredor4.start();
-	
     }
 	
 	@FXML
+	public void pauseButton() {
+		corredor1.stop();
+	}
+	
+	@FXML
 	public void playagainButton() {
-			
 		c1.setLayoutX(0);
 		c2.setLayoutX(0);
 		c3.setLayoutX(0);
