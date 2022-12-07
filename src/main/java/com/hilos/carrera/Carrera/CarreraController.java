@@ -88,11 +88,10 @@ public class CarreraController  {
 		c4.setLayoutX(0);
 	}
 	
-	/*
+	
 	@FXML
 	public void pauseButton() {
-		corredor1.interrupt();
+		//corredor1.interrupt();
 	}
-	*/
 	
 }
