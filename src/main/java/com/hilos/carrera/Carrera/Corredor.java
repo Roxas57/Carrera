@@ -42,44 +42,47 @@ public class Corredor extends Thread {
 					break;
 				}
 				
-				if(posicion.getLayoutX() >= corredor.getBarrera().getLayoutX() - 50) {
-					if (c1 > c2) {
-						if (c1 > c3) {
-							if (c1 > c4) {
-								 JOptionPane.showMessageDialog(null, "Ha ganado el corredor Rojo");
-							}
-						}
-					}
-					if (c2 > c1) {
-						if (c2 > c3) {
-							if (c2 > c4) {
-								JOptionPane.showMessageDialog(null, "Ha ganado el corredor Azul");
-							}
-						}
-					}
-					if (c3 > c1) {
-						if (c3 > c2) {
-							if (c3 > c4) {
-								JOptionPane.showMessageDialog(null, "Ha ganado el corredor Verde");
-							}
-						}
-					}
-					if (c4 > c1) {
-						if (c4 > c2) {
-							if (c4 > c3) {
-								JOptionPane.showMessageDialog(null, "Ha ganado el corredor Amarillo");
-							}
-						}
-					}
-				}
-				
 			}catch (Exception e) {
 				// TODO: handle exception
 				System.out.println(e);
-			}
-			
-			
+			}	
 		}
+		
+		if(posicion.getLayoutX() >= corredor.getBarrera().getLayoutX() - 50) {
+			if (c1 > c2) {
+				if (c1 > c3) {
+					if (c1 > c4) {
+						 JOptionPane.showMessageDialog(null, "Ha ganado el corredor Rojo");
+					}
+				}
+			}
+			if (c2 > c1) {
+				if (c2 > c3) {
+					if (c2 > c4) {
+						JOptionPane.showMessageDialog(null, "Ha ganado el corredor Azul");
+					}
+				}
+			}
+			if (c3 > c1) {
+				if (c3 > c2) {
+					if (c3 > c4) {
+						JOptionPane.showMessageDialog(null, "Ha ganado el corredor Verde");
+					}
+				}
+			}
+			if (c4 > c1) {
+				if (c4 > c2) {
+					if (c4 > c3) {
+						JOptionPane.showMessageDialog(null, "Ha ganado el corredor Amarillo");
+					}
+				}
+			}
+		}
+	}
+	
+	
+	public boolean pauseRun() {
+		return confirm = false;
 	}
 	
 	

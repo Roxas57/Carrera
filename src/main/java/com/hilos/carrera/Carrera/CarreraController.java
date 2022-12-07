@@ -91,7 +91,11 @@ public class CarreraController  {
 	
 	@FXML
 	public void pauseButton() {
-		//corredor1.interrupt();
+		corredor1.pauseRun();
+		corredor2.pauseRun();
+		corredor3.pauseRun();
+		corredor4.pauseRun();
+		
 	}
 	
 }
