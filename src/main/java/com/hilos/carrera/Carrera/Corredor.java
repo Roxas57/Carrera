@@ -9,6 +9,8 @@ public class Corredor extends Thread {
 	private ImageView posicion;
 	private CarreraController corredor;
 	
+	private boolean confirm = true;
+	
 	public Corredor(ImageView posicion, CarreraController corredor) {
 		this.posicion = posicion;
 		this.corredor = corredor;
@@ -22,11 +24,11 @@ public class Corredor extends Thread {
 		int c4 = 0;
 		
 		//Con este while lo que hacemos en un bucle "infinito"
-		while(true) {
+		while(confirm) {
 			try {
 				//En esta línea lo que hacemos es que los hilos avancen poco a poco de forma aleatoria
 				Thread.sleep((int)(Math.random() * 1000));
-				//Aquí obtenemos la posición de los corredores (las imágenes)
+				//Aquí obtenemos la posición las imágenes de los corredores
 				c1 = (int) corredor.getC1().getLayoutX();
 				c2 = (int) corredor.getC2().getLayoutX();
 				c3 = (int) corredor.getC3().getLayoutX();
