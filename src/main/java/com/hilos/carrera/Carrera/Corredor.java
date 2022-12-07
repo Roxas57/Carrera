@@ -13,21 +13,26 @@ public class Corredor extends Thread {
 		this.posicion = posicion;
 		this.corredor = corredor;
 	}
-
+	
 	public void run() {
+		//Estas son las coordenadas de los corredores
 		int c1 = 0;
 		int c2 = 0;
 		int c3 = 0;
 		int c4 = 0;
 		
+		//Con este while lo que hacemos en un bucle "infinito"
 		while(true) {
 			try {
+				//En esta línea lo que hacemos es que los hilos avancen poco a poco de forma aleatoria
 				Thread.sleep((int)(Math.random() * 1000));
+				//Aquí obtenemos la posición de los corredores (las imágenes)
 				c1 = (int) corredor.getC1().getLayoutX();
 				c2 = (int) corredor.getC2().getLayoutX();
 				c3 = (int) corredor.getC3().getLayoutX();
 				c4 = (int) corredor.getC4().getLayoutX();
 				
+				//Aquí si la posción del los corredores es menor a la de la barrera el programa sigue, si no se finaliza.
 				if(c1 < corredor.getBarrera().getLayoutX() - 50 && c2 < corredor.getBarrera().getLayoutX() - 50 
 						&& c3 < corredor.getBarrera().getLayoutX() - 50 && c4 < corredor.getBarrera().getLayoutX() - 50 ) {
 					posicion.setLayoutX(posicion.getLayoutX() + 10);

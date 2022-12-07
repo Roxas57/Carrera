@@ -81,15 +81,17 @@ public class CarreraController  {
     }
 	
 	@FXML
-	public void pauseButton() {
-		corredor1.stop();
-	}
-	
-	@FXML
 	public void playagainButton() {
 		c1.setLayoutX(0);
 		c2.setLayoutX(0);
 		c3.setLayoutX(0);
 		c4.setLayoutX(0);
 	}
+	
+	/*
+	@FXML
+	public void pauseButton() {
+		corredor1.stop();
+	}
+	*/
 }
