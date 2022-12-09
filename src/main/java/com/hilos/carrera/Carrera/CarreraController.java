@@ -56,12 +56,6 @@ public class CarreraController  {
 		return barrera;
 	}
 	
-	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		pause.setDisable(true);
-		playagain.setDisable(true);
-	}
-	
 	Corredor corredor1;
 	Corredor corredor2;
 	Corredor corredor3;
@@ -94,8 +88,7 @@ public class CarreraController  {
 		corredor1.pauseRun();
 		corredor2.pauseRun();
 		corredor3.pauseRun();
-		corredor4.pauseRun();
-		
+		corredor4.pauseRun();	
 	}
 	
 }
